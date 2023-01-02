@@ -1,20 +1,42 @@
-import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
+
+import {GameCard} from '../components/Votes/GameCard'
+import {Header} from '../components/Votes/Header'
+import {clientGetGames} from '../api/api'
 
 export function VotesScreen() {
-    return(
-        <View style={styles.container}>
-            <Text>Hello, world</Text>
-        </View>
-    );
+
+    const [gameList, setGameList] = useState([{}])
+    useEffect(() => {
+        (async() => {
+            const response = await clientGetGames()
+            setGameList(response)
+            console.log(gameList)
+        })()
+    },[])
+     return (
+    <View style={styles.container}>
+      <Header/>
+      <ScrollView style={styles.gameArea}>
+        {gameList.map(game => GameCard(game))}
+      </ScrollView>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        color: '#ffffff',
-        backgroundColor: '#191919',
-        alignItems: 'center',
-        justifyContent: 'center'
+      flex: 1,
+      color:'#fff',
+      backgroundColor: '#191919',
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    gameArea:{
+      flex:1,
+      paddingTop:10,
+      paddingBottom: 20,
+      width:'100%'
     }
-})
+  });
