@@ -3,5 +3,5 @@ export interface GameInterface {
     name: string;
     description: string;
     cover: string;
-    votes: string;
+    votes: number;
 } 
