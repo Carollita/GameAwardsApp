@@ -3,14 +3,13 @@
 App for ranking games developed in FullStack Labs promoted by Digital Innovation One.
 
 ![React](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 ### ⚙️ Requirements
 [![VS Code](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)](https://code.visualstudio.com)
 [![Node JS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/en/)
 [![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://docs.npmjs.com)
 [![Expo](https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white)](https://docs.expo.dev)
-
-Click in the upper badges to be redirected for download and documentatios websites.
 
 #### To checkout Node JS Version:
 ```
@@ -59,6 +58,12 @@ Add Tab navigation
 ```
 npm install @react-navigation/bottom-tabs
 ```
+
+Add icons
+```
+npm install react-native-vector-icons --save
+```
+
 Run Project
 ```
 expo start
@@ -66,17 +71,18 @@ expo start
 
 ### 💻 Technologies / Tools
 
-#### IDE
-```
-VS Code
-```
-
-#### Front-end
 ```
 React Native
+- React Native Vector Icons
+TypeScript
 Node JS
 NPM
 Expo
 React Navigation
 - Tab navigation
+```
+
+#### IDE
+```
+VS Code
 ```
